@@ -172,7 +172,7 @@ const FineDiningAgenda = () => {
         {eventSchedule.map((item, index) => (
           <motion.div
             key={item.id}
-            className="relative z-0 mb-12 last:mb-0"
+            className="relative z-0 mb-12 last:mb-20"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 + index * 0.15 }}
