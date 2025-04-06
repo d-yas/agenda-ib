@@ -1,10 +1,10 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { eventSchedule } from "../data/eventSchedule";
+import ShootingStars from './ShootingStars'
 
 const FineDiningAgenda = () => {
   const [expandedItem, setExpandedItem] = useState(null);
-  const constraintsRef = useRef(null);
 
   // Animation variants
   const itemVariants = {
@@ -70,15 +70,15 @@ const FineDiningAgenda = () => {
     <div className="min-h-screen bg-[#000317] text-[#8BE6FF] overflow-hidden relative">
       {/* Futuristic Particle Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(12)].map((_, i) => (
+        {[...Array(152)].map((_, i) => (
           <motion.span
             key={i}
-            className="absolute rounded-full bg-[#8BE6FF]/10"
+            className="absolute rounded-full bg-[#32849b]"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              width: `${Math.random() * 4 + 1}px`,
-              height: `${Math.random() * 4 + 1}px`,
+              width: `${Math.random() * 3 + 1}px`,
+              height: `${Math.random() * 3 + 1}px`,
             }}
             animate={{
               y: [0, -20, 0],
@@ -99,6 +99,7 @@ const FineDiningAgenda = () => {
         transition={{ delay: 0.2, duration: 0.8 }}
         className="relative py-16 px-6 text-center border-b border-[#8BE6FF]/10"
       >
+        
         <motion.h1
           className="text-4xl font-light tracking-widest mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#8BE6FF] to-[#00B4D8]"
           initial={{ letterSpacing: "0.5em" }}
@@ -123,9 +124,11 @@ const FineDiningAgenda = () => {
         </motion.p>
       </motion.header>
 
+      <ShootingStars />
+
       {/* Timeline with Futuristic Glow */}
       <motion.div
-        ref={constraintsRef}
+        
         className="relative px-6 py-12 max-w-2xl mx-auto"
       >
         <motion.div
@@ -140,9 +143,8 @@ const FineDiningAgenda = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 + index * 0.15 }}
-            drag="y"
-            dragConstraints={constraintsRef}
-            whileHover={{ y: -5 }}
+
+            whileHover={{ y: -3 }}
           >
             {/* Holographic Timeline Dot */}
             <motion.div
