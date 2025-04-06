@@ -2,7 +2,7 @@ export const eventSchedule = [
     {
       id: 1,
       type: "Meeting",
-      time: "17:00 - 18:30",
+      time: "10:00 - 18:30",
       title: "Networking Reception",
       description: "Welcome drinks and professional networking with peers from top law firms",
       location: "Grand Foyer",
