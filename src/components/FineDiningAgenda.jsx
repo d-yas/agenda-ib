@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { eventSchedule } from "../data/eventSchedule";
-import ShootingStars from './ShootingStars'
+import ShootingStars from "./ShootingStars";
 
 const FineDiningAgenda = () => {
   const [expandedItem, setExpandedItem] = useState(null);
@@ -55,7 +55,7 @@ const FineDiningAgenda = () => {
   // Futuristic glow effect for timeline
   const timelineGlow = {
     initial: { opacity: 0 },
-    animate: { 
+    animate: {
       opacity: 1,
       boxShadow: "0 0 10px rgba(139, 230, 255, 0.5)",
     },
@@ -92,45 +92,58 @@ const FineDiningAgenda = () => {
         ))}
       </div>
 
-      {/* Animated Header */}
+      {/* Updated Header Section */}
       <motion.header
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
-        className="relative py-16 px-6 text-center border-b border-[#8BE6FF]/10"
+        className="relative py-6 px-6 border-b border-[#8BE6FF]/10 flex items-center justify-between"
       >
-        
-        <motion.h1
-          className="text-4xl font-light tracking-widest mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#8BE6FF] to-[#00B4D8]"
-          initial={{ letterSpacing: "0.5em" }}
-          animate={{ letterSpacing: "0.2em" }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-        >
-          LEGAL EPICUREAN
-        </motion.h1>
+        {/* Logo on Left */}
         <motion.div
-          className="w-24 h-px bg-gradient-to-r from-transparent via-[#8BE6FF] to-transparent mx-auto my-4"
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ delay: 0.8, duration: 1.2 }}
-        />
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.8 }}
-          transition={{ delay: 1.2, duration: 1 }}
-          className="text-[#8BE6FF]/80 text-sm font-serif"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className="flex items-center"
         >
-          An Evening of Refined Discourse
-        </motion.p>
+          <img src="logo.png" alt="" width={80}/>
+          
+        </motion.div>
+
+        {/* Centered Title */}
+        <div className="text-center absolute left-0 right-0 mx-auto w-fit">
+          <motion.h1
+            className="text-3xl font-light tracking-widest mb-1 bg-clip-text text-transparent bg-gradient-to-r from-[#8BE6FF] to-[#00B4D8]"
+            initial={{ letterSpacing: "0.5em" }}
+            animate={{ letterSpacing: "0.2em" }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
+            Deniz Hukuk Bürosu
+          </motion.h1>
+          <motion.div
+            className="w-24 h-px bg-gradient-to-r from-transparent via-[#8BE6FF] to-transparent mx-auto my-2"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 0.8, duration: 1.2 }}
+          />
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ delay: 1.2, duration: 1 }}
+            className="text-[#8BE6FF]/80 text-[0.85rem] font-serif"
+          >
+            Av. Denizcan Yaş
+          </motion.p>
+        </div>
+
+        {/* Empty div for balance (can add menu icon later) */}
+        <div className="w-10"></div>
       </motion.header>
 
       <ShootingStars />
 
       {/* Timeline with Futuristic Glow */}
-      <motion.div
-        
-        className="relative px-6 py-12 max-w-2xl mx-auto"
-      >
+      <motion.div className="relative px-6 py-12 max-w-2xl mx-auto">
         <motion.div
           className="absolute left-8 top-0 h-full w-0.5 bg-gradient-to-b from-[#8BE6FF]/20 to-transparent"
           {...timelineGlow}
@@ -143,7 +156,6 @@ const FineDiningAgenda = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 + index * 0.15 }}
-
             whileHover={{ y: -3 }}
           >
             {/* Holographic Timeline Dot */}
@@ -175,7 +187,6 @@ const FineDiningAgenda = () => {
               style={{
                 transformPerspective: 1000,
               }}
-              
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="flex justify-between items-start">
@@ -234,7 +245,7 @@ const FineDiningAgenda = () => {
                             <motion.span
                               className="text-xs text-[#8BE6FF]"
                               animate={{
-                                backgroundPosition: ['0%', '100%'],
+                                backgroundPosition: ["0%", "100%"],
                               }}
                               transition={{
                                 duration: 3,
@@ -258,7 +269,7 @@ const FineDiningAgenda = () => {
                       >
                         {item.description}
                       </motion.p>
-                      
+
                       <motion.div
                         className="flex flex-wrap gap-2"
                         initial={{ opacity: 0 }}
@@ -286,22 +297,23 @@ const FineDiningAgenda = () => {
                       {/* Laser Button Effect */}
                       <motion.button
                         className="mt-4 relative overflow-hidden text-xs tracking-wider text-[#8BE6FF] hover:text-white flex items-center px-4 py-2 rounded-lg bg-[#8BE6FF]/5"
-                        whileHover={{ 
-                          background: "linear-gradient(90deg, transparent, rgba(139, 230, 255, 0.1), transparent)",
+                        whileHover={{
+                          background:
+                            "linear-gradient(90deg, transparent, rgba(139, 230, 255, 0.1), transparent)",
                         }}
                         whileTap={{ scale: 0.95 }}
                       >
                         <motion.span
                           className="absolute top-0 left-0 h-full w-0.5 bg-[#8BE6FF]"
                           initial={{ x: -10 }}
-                          animate={{ 
-                            x: [ -10, 110, -10 ],
+                          animate={{
+                            x: [-10, 110, -10],
                             opacity: [0, 1, 0],
                           }}
-                          transition={{ 
+                          transition={{
                             duration: 1.5,
                             delay: 0.3,
-                            repeat: Infinity
+                            repeat: Infinity,
                           }}
                         />
                         ADD TO CALENDAR
