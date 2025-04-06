@@ -239,7 +239,7 @@ const FineDiningAgenda = () => {
                     <span className="text-[#8BE6FF]/70">{item.location}</span>
                   </motion.div>
                 </div>
-                <motion.span className="text-2xl">{item.icon}</motion.span>
+                
               </div>
 
               {/* Always visible content */}
