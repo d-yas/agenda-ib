@@ -73,7 +73,7 @@ const FineDiningAgenda = () => {
         {[...Array(152)].map((_, i) => (
           <motion.span
             key={i}
-            className="absolute rounded-full bg-[#32849b]"
+            className="absolute rounded-full bg-[#174a58]"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -92,52 +92,35 @@ const FineDiningAgenda = () => {
         ))}
       </div>
 
-      {/* Updated Header Section */}
+      {/* Animated Header */}
       <motion.header
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
-        className="relative py-6 px-6 border-b border-[#8BE6FF]/10 flex items-center justify-between"
+        className="relative py-16 px-6 text-center border-b border-[#8BE6FF]/10"
       >
-        {/* Logo on Left */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-          className="flex items-center"
+        <motion.h1
+          className="text-4xl font-light tracking-widest mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#8BE6FF] to-[#00B4D8]"
+          initial={{ letterSpacing: "0.5em" }}
+          animate={{ letterSpacing: "0.2em" }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
         >
-          <img src="logo.png" alt="" width={80}/>
-          
-        </motion.div>
-
-        {/* Centered Title */}
-        <div className="text-center absolute left-0 right-0 mx-auto w-fit">
-          <motion.h1
-            className="text-3xl font-light tracking-widest mb-1 bg-clip-text text-transparent bg-gradient-to-r from-[#8BE6FF] to-[#00B4D8]"
-            initial={{ letterSpacing: "0.5em" }}
-            animate={{ letterSpacing: "0.2em" }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-          >
-            Deniz Hukuk Bürosu
-          </motion.h1>
-          <motion.div
-            className="w-24 h-px bg-gradient-to-r from-transparent via-[#8BE6FF] to-transparent mx-auto my-2"
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 0.8, duration: 1.2 }}
-          />
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.8 }}
-            transition={{ delay: 1.2, duration: 1 }}
-            className="text-[#8BE6FF]/80 text-[0.85rem] font-serif"
-          >
-            Av. Denizcan Yaş
-          </motion.p>
-        </div>
-
-        {/* Empty div for balance (can add menu icon later) */}
-        <div className="w-10"></div>
+          DCY Hukuk Bürosu
+        </motion.h1>
+        <motion.div
+          className="w-24 h-px bg-gradient-to-r from-transparent via-[#8BE6FF] to-transparent mx-auto my-4"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ delay: 0.8, duration: 1.2 }}
+        />
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.8 }}
+          transition={{ delay: 1.2, duration: 1 }}
+          className="text-[#8BE6FF]/80 text-sm font-serif"
+        >
+          Av. Denizcan Yaş
+        </motion.p>
       </motion.header>
 
       <ShootingStars />
@@ -347,23 +330,22 @@ const FineDiningAgenda = () => {
 
       {/* Animated Footer */}
       <motion.footer
-        className="fixed bottom-0 left-0 right-0 py-4 text-center bg-[#000317]/90 backdrop-blur-sm"
+        className="fixed bottom-0 left-0 right-0 py-3 text-center bg-[#000317]/90 backdrop-blur-sm border-t border-[#8BE6FF]/10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.8 }}
       >
-        <motion.div
-          className="text-xs text-[#8BE6FF]/60 tracking-widest"
-          animate={{
-            opacity: [0.6, 1, 0.6],
-            transition: {
-              duration: 4,
-              repeat: Infinity,
-            },
-          }}
-        >
-          COUNSEL & CUISINE • {new Date().getFullYear()}
-        </motion.div>
+        <div className="flex items-center justify-center space-x-4">
+          {/* Left Logo */}
+          <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 0.7, x: 0 }}
+            transition={{ delay: 2, duration: 0.8 }}
+            className="flex items-center"
+          >
+            <img src="logotam.png" alt="logo" width={130} />
+          </motion.div>
+        </div>
       </motion.footer>
     </div>
   );
