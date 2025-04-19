@@ -2,10 +2,21 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { eventSchedule } from "../data/eventSchedule";
 import ShootingStars from "./ShootingStars";
+import Header from "./Header";
+import Particles from "./Particles";
+import Footer from "./Footer";
+import { useParams } from "react-router-dom";
+import { guestList } from "../data/guestList";
+
+
+
 
 const FineDiningAgenda = () => {
+  const { guestId } = useParams();
   const [expandedItem, setExpandedItem] = useState(null);
   const [currentTime, setCurrentTime] = useState(new Date());
+
+  const currentGuest = guestList.find(guest => guest.id === guestId);
 
   // Update current time every second
   useEffect(() => {
@@ -105,64 +116,14 @@ const FineDiningAgenda = () => {
 
   return (
     <div className="min-h-screen bg-[#000317] text-[#8BE6FF] overflow-hidden relative">
-      {/* Futuristic Particle Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(152)].map((_, i) => (
-          <motion.span
-            key={i}
-            className="absolute rounded-full bg-[#174a58]"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              width: `${Math.random() * 3 + 1}px`,
-              height: `${Math.random() * 3 + 1}px`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.2, 0.8, 0.2],
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Animated Header */}
-      <motion.header
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.8 }}
-        className="relative py-16 px-6 text-center border-b border-[#8BE6FF]/10"
-      >
-        <motion.h1
-          className="text-4xl font-light tracking-widest mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#8BE6FF] to-[#00B4D8]"
-          initial={{ letterSpacing: "0.5em" }}
-          animate={{ letterSpacing: "0.2em" }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-        >
-          ABC Hukuk Bürosu
-        </motion.h1>
-        <motion.div
-          className="w-24 h-px bg-gradient-to-r from-transparent via-[#8BE6FF] to-transparent mx-auto my-4"
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ delay: 0.8, duration: 1.2 }}
-        />
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.8 }}
-          transition={{ delay: 1.2, duration: 1 }}
-          className="text-[#8BE6FF]/80 text-sm font-serif"
-        >
-          Av. İsim Soyisim
-        </motion.p>
-      </motion.header>
+    
+      <Particles />
+      
+      <Header guest={currentGuest} />
 
       <ShootingStars />
 
-      {/* Timeline with Futuristic Glow */}
+      {/* Timeline */}
       <motion.div className="relative px-6 py-12 max-w-2xl mx-auto">
         <motion.div
           className="absolute left-8 top-0 h-full w-0.5 bg-gradient-to-b from-[#8BE6FF]/20 to-transparent"
@@ -324,35 +285,7 @@ const FineDiningAgenda = () => {
         ))}
       </motion.div>
 
-      {/* Animated Footer with Clock */}
-      <motion.footer
-        className="fixed bottom-0 left-0 right-0 py-3 text-center bg-[#000317]/90 backdrop-blur-sm border-t border-[#8BE6FF]/10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.8 }}
-      >
-        <div className="flex items-center justify-between px-6">
-          {/* Left Logo */}
-          <motion.div
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 0.7, x: 0 }}
-            transition={{ delay: 2, duration: 0.8 }}
-            className="flex items-center"
-          >
-            <img src="logotam.png" alt="logo" width={130} />
-          </motion.div>
-
-          {/* Clock on the right */}
-          <motion.div
-            className="text-[#8BE6FF]/80 text-sm font-mono"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2.2 }}
-          >
-            {formatTime(currentTime)}
-          </motion.div>
-        </div>
-      </motion.footer>
+      <Footer />
     </div>
   );
 };
