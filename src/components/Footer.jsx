@@ -119,8 +119,8 @@ const Footer = () => {
             <img src="logotam.png" alt="logo" width={100} />
           </motion.div>
 
-          {/* <Interactive links={interactiveLinks} /> */}
-          <StaticKahoot />
+          <Interactive links={interactiveLinks} />
+          {/* <StaticKahoot /> */}
 
           {/* Clock */}
           <motion.div
