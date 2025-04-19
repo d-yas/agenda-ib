@@ -17,6 +17,7 @@ const FineDiningAgenda = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   const currentGuest = guestList.find(guest => guest.id === guestId);
+  const guest = guestList.find(g => g.id === guestId);
 
   // Update current time every second
   useEffect(() => {
@@ -114,6 +115,7 @@ const FineDiningAgenda = () => {
     },
   };
 
+  if (!guest) {
   return (
     <div className="min-h-screen bg-[#000317] text-[#8BE6FF] overflow-hidden relative">
     
@@ -288,6 +290,7 @@ const FineDiningAgenda = () => {
       <Footer />
     </div>
   );
+}
 };
 
 export default FineDiningAgenda;

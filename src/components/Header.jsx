@@ -66,18 +66,7 @@ const Header = () => {
         </motion.p>
       )}
 
-      {guest && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute top-4 right-4 text-right"
-        >
-          <div className="text-xs text-[#8BE6FF]/60">Welcome</div>
-          <div className="text-sm">{guest.name}</div>
-          <div className="text-xs text-[#8BE6FF]/50">{guest.title}</div>
-        </motion.div>
-      )}
+      
     </motion.header>
   );
 };
