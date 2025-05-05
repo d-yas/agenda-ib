@@ -1,22 +1,62 @@
 export const guestList = [
   {
-    firm: "ABC Law Partners",
+    firm: "Yüksel Hukuk Bürosu",
     members: [
       {
-        id: "abc1",
-        name: "Erica Johnson",
-        title: "Senior Partner"
+        id: "1",
+        name: "",
+        title: "Sn. Av. Necmettin Yüksel"
       },
+    ]
+  },
+  {
+    firm: "Yön Hukuk Bürosu",
+    members: [
       {
-        id: "abc2",
-        name: "Michael Chen",
-        title: "Managing Partner"
+        id: "2",
+        name: "",
+        title: "Sn. Av. Alpkan Demirkan"
       },
+    ]
+  },
+  {
+    firm: "Sökmen Hukuk Bürosu",
+    members: [
       {
-        id: "abc3",
-        name: "Sarah Williams",
-        title: "Associate Partner"
-      }
+        id: "3",
+        name: "",
+        title: "Sn. Av. Saadet Sökmen"
+      },
+    ]
+  },
+  {
+    firm: "Erol Hukuk Bürosu",
+    members: [
+      {
+        id: "4",
+        name: "",
+        title: "Sn. Av. Tuğra Nuri Erol"
+      },
+    ]
+  },
+  {
+    firm: "Timurkaynak Hukuk Bürosu",
+    members: [
+      {
+        id: "5",
+        name: "",
+        title: "Sn. Av. Umut Levent Timurkaynak"
+      },
+    ]
+  },
+  {
+    firm: "Kırçıl Hukuk Bürosu",
+    members: [
+      {
+        id: "6",
+        name: "",
+        title: "Sn. Av. Burcu Eroğlu"
+      },
     ]
   },
   {
@@ -39,24 +79,5 @@ export const guestList = [
       }
     ]
   },
-  {
-    firm: "Justice & Partners",
-    members: [
-      {
-        id: "jp1",
-        name: "Sophia Martinez",
-        title: "Founding Partner"
-      },
-      {
-        id: "jp2",
-        name: "Robert Taylor",
-        title: "Tax Specialist"
-      },
-      {
-        id: "jp3",
-        name: "Emma Wilson",
-        title: "Junior Associate"
-      }
-    ]
-  }
+  
 ];

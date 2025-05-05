@@ -48,12 +48,10 @@ const Header = () => {
           animate={{ opacity: 0.8 }}
           transition={{ delay: 1.2, duration: 1 }}
         >
-          <p className="text-[#8BE6FF]/80 text-sm font-serif">
+          <p className="text-[#8BE6FF]/80 text-md mt-10 font-serif">
             {guest.title}
           </p>
-          <p className="text-[#8BE6FF]/60 text-xs mt-2">
-            {guest.name}
-          </p>
+         
         </motion.div>
       ) : (
         <motion.p
@@ -62,7 +60,7 @@ const Header = () => {
           transition={{ delay: 1.2, duration: 1 }}
           className="text-[#8BE6FF]/80 text-sm font-serif"
         >
-          December 15, 2023 | Grand Ballroom
+          Kule
         </motion.p>
       )}
 

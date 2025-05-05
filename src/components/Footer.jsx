@@ -76,6 +76,26 @@ const StaticKahoot = () => {
   );
 };
 
+const StaticMenti = () => {
+  return (
+    <motion.div
+      className="relative mb-2"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 2.1 }}
+    >
+      <a
+        href="https://www.mentimeter.com/"
+        target="_blank"
+        className={`flex items-center gap-2 px-4 py-3 rounded-full font-bold
+             bg-[#8BE6FF] text-[#000317] transition-all animate-pulse`}
+      >
+        Kahoot
+      </a>
+    </motion.div>
+  );
+};
+
 const Footer = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -119,8 +139,8 @@ const Footer = () => {
             <img src="logotam.png" alt="logo" width={100} />
           </motion.div>
 
-          <Interactive links={interactiveLinks} />
-          {/* <StaticKahoot /> */}
+          {/* <Interactive links={interactiveLinks} /> */}
+          <StaticKahoot />
 
           {/* Clock */}
           <motion.div
