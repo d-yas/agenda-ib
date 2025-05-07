@@ -200,7 +200,7 @@ const TimeLine = () => {
                 >
                   <div className="inline-flex items-center px-2 py-1 rounded-full bg-gradient-to-r from-[#00FFD1]/10 to-[#00FFD1]/20">
                     <motion.span className="text-xs text-[#00FFD1]">
-                      LIVE NOW
+                      Gerçekleşiyor
                     </motion.span>
                   </div>
                 </motion.div>

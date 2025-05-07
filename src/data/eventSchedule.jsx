@@ -2,12 +2,10 @@ export const eventSchedule = [
     {
       id: 1,
       type: "Karşılama",
-      time: "9:45 - 10:00",
+      time: "9:15 - 10:00",
       title: "Karşılama",
-      description: "Welcome drinks and professional networking with peers from top law firms",
-      location: "Kule",
-      dressCode: "Business Attire",
-      icon: "🤝",
+      description: "",
+      location: "Türkiye İş Bankası Kule 1",
       highlight: false
     },
     {
@@ -15,10 +13,8 @@ export const eventSchedule = [
       type: "Sergi Ziyareti",
       time: "10:00 - 10:30",
       title: "Sergi Ziyareti",
-      description: "Rahmi Aksungur Sanat Galerisi sergisini ziyaret",
+      description: "Rahmi Aksungur Retrospektif ",
       location: "Kibele Sanat Galerisi",
-      dressCode: "Cocktail Attire",
-      icon: "🍸",
       highlight: false
     },
     {
@@ -26,10 +22,8 @@ export const eventSchedule = [
       type: "Kokteyl",
       time: "10:30 - 11:00",
       title: "Kokteyl",
-      description: "Five-course tasting menu curated by Michelin-starred chefs with wine pairings",
+      description: "buraya text girilmeli mi ?",
       location: "Crystal Dining Room",
-      dressCode: "Black Tie Optional",
-      icon: "🍽️",
       highlight: false
     },
     {
@@ -37,18 +31,17 @@ export const eventSchedule = [
       type: "Toplantı",
       time: "11:00 - 12:15",
       title: "Toplantı",
-      description: "Relax with premium spirits and live jazz ensemble featuring Grammy-winning artists",
+      /* description: "Bankacılık sektörü ve İkinci Yüzyıl",  */
+      description: "İkinci Yüzyıl Vizyonu & Performans Değerlendirmesi", 
       location: "Velvet Lounge",
-      dressCode: "Evening Attire",
-      icon: "🎷",
       highlight: false
     },
     {
       id: 5,
       type: "Yemek",
-      time: "12:30 - 14:30",
+      time: "12:30 - 17:30",
       title: "Yemek",
-      description: "Relax with premium spirits and live jazz ensemble featuring Grammy-winning artists",
+      description: "Menüye dair bilgi verelim mi ?",
       location: "İş Bankası Kuleleri",
       highlight: false
     }
