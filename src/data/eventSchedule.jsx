@@ -22,8 +22,8 @@ export const eventSchedule = [
       type: "Kokteyl",
       time: "10:30 - 11:00",
       title: "Kokteyl",
-      description: "buraya text girilmeli mi ?",
-      location: "Crystal Dining Room",
+      description: "",
+      location: "Türkiye İş Bankası Kule 1",
       highlight: false
     },
     {
@@ -33,7 +33,7 @@ export const eventSchedule = [
       title: "Toplantı",
       /* description: "Bankacılık sektörü ve İkinci Yüzyıl",  */
       description: "İkinci Yüzyıl Vizyonu & Performans Değerlendirmesi", 
-      location: "Velvet Lounge",
+      location: "Türkiye İş Bankası Kule 1",
       highlight: false
     },
     {
@@ -41,8 +41,8 @@ export const eventSchedule = [
       type: "Yemek",
       time: "12:30 - 17:30",
       title: "Yemek",
-      description: "Menüye dair bilgi verelim mi ?",
-      location: "İş Bankası Kuleleri",
+      description: "",
+      location: "Türkiye İş Bankası Kule 1",
       highlight: false
     }
   ];

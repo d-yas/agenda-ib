@@ -60,6 +60,16 @@ export const guestList = [
     ]
   },
   {
+    firm: "Bölüm Müdürü",
+    members: [
+      {
+        id: "BOLUM-R2X7V5QL",
+        name: "",
+        title: "Sn. Ayşegül Gümüş Atik"
+      },
+    ]
+  },
+  {
     firm: "XYZ Legal Associates",
     members: [
       {

@@ -90,7 +90,7 @@ const StaticMenti = () => {
         className={`flex items-center gap-2 px-4 py-3 rounded-full font-bold
              bg-[#8BE6FF] text-[#000317] transition-all animate-pulse`}
       >
-        Kahoot
+        Menti
       </a>
     </motion.div>
   );
@@ -139,8 +139,8 @@ const Footer = () => {
             <img src="logotam.png" alt="logo" width={100} />
           </motion.div>
 
-          <Interactive links={interactiveLinks} />
-          {/* <StaticKahoot /> */}
+          {/* <Interactive links={interactiveLinks} /> */}
+          <StaticMenti />
 
           {/* Clock */}
           <motion.div
