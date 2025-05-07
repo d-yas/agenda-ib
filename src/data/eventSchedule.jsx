@@ -2,7 +2,7 @@ export const eventSchedule = [
     {
       id: 1,
       type: "Karşılama",
-      time: "9:15 - 10:00",
+      time: "9:45 - 10:00",
       title: "Karşılama",
       description: "",
       location: "Türkiye İş Bankası Kule 1",
