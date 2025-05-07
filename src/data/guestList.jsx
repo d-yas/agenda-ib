@@ -70,6 +70,16 @@ export const guestList = [
     ]
   },
   {
+    firm: "Birim Müdürü",
+    members: [
+      {
+        id: "BIRIM-L6J3T0WB",
+        name: "",
+        title: "Sn. Ahmet Üstündağ"
+      },
+    ]
+  },
+  {
     firm: "XYZ Legal Associates",
     members: [
       {
