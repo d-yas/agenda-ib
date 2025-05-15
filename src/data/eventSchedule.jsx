@@ -31,7 +31,6 @@ export const eventSchedule = [
       type: "Toplantı",
       time: "11:00 - 12:15",
       title: "Toplantı",
-      /* description: "Bankacılık sektörü ve İkinci Yüzyıl",  */
       description: "İkinci Yüzyıl Vizyonu & Performans Değerlendirmesi", 
       location: "Türkiye İş Bankası Kule 1",
       highlight: false
@@ -39,7 +38,7 @@ export const eventSchedule = [
     {
       id: 5,
       type: "Yemek",
-      time: "12:30 - 17:30",
+      time: "12:30 - 14:30",
       title: "Yemek",
       description: "",
       location: "Türkiye İş Bankası Kule 1",

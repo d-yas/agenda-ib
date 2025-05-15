@@ -80,12 +80,12 @@ export const guestList = [
     ]
   },
   {
-    firm: "PKT",
+    firm: "Perakende Krediler Takip Bölümü",
     members: [
       {
         id: "testpkt",
         name: "",
-        title: "Sn. PKT Kullanıcı"
+        title: "PKT"
       },
     ]
   },
