@@ -85,7 +85,7 @@ export const guestList = [
       {
         id: "testpkt",
         name: "",
-        title: "PKT"
+        title: ""
       },
     ]
   },
