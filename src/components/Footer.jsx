@@ -160,7 +160,7 @@ const Footer = () => {
           </motion.div>
 
           
-          {/* <StaticMenti /> */}
+          <StaticMenti />
           <StaticMenti2 />
 
           {/* Clock */}
