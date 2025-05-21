@@ -96,6 +96,26 @@ const StaticMenti = () => {
   );
 };
 
+const StaticMenti2 = () => {
+  return (
+    <motion.div
+      className="relative mb-2"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 2.1 }}
+    >
+      <a
+        href="https://www.menti.com/alenwbhcdjjx"
+        target="_blank"
+        className={`flex items-center gap-2 px-4 py-3 rounded-full font-bold
+             bg-[#c78bff] text-[#000317] transition-all animate-pulse`}
+      >
+        Menti
+      </a>
+    </motion.div>
+  );
+};
+
 const Footer = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -140,7 +160,8 @@ const Footer = () => {
           </motion.div>
 
           
-          <StaticMenti />
+          {/* <StaticMenti /> */}
+          <StaticMenti2 />
 
           {/* Clock */}
           <motion.div
