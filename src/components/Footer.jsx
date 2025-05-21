@@ -85,7 +85,7 @@ const StaticMenti = () => {
       transition={{ delay: 2.1 }}
     >
       <a
-        href="https://www.mentimeter.com/"
+        href="https://www.menti.com/altxz3qpo1w6"
         target="_blank"
         className={`flex items-center gap-2 px-4 py-3 rounded-full font-bold
              bg-[#8BE6FF] text-[#000317] transition-all animate-pulse`}
