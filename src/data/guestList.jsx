@@ -55,7 +55,7 @@ export const guestList = [
       {
         id: "KIRCIL-W8K2Z1NP",
         name: "",
-        title: "Sn. Av. Burcu Eroğlu"
+        title: "Sn. Av. Burcu Ekşioğlu"
       },
     ]
   },
