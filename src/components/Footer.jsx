@@ -133,10 +133,9 @@ const Footer = () => {
 
   // Replace these with your actual links
   const interactiveLinks = [
-    { name: "Kahoot Quiz", url: "https://kahoot.it" },
-    { name: "Mentimeter Poll", url: "https://www.menti.com" },
-    { name: "Feedback Form", url: "https://forms.gle/example" },
-    { name: "Event Survey", url: "https://forms.gle/example" },
+    { name: "Mavi", url: "https://www.menti.com/altxz3qpo1w6" },
+    { name: "Mor", url: "https://www.menti.com" },
+    
   ];
 
   return (
@@ -160,8 +159,8 @@ const Footer = () => {
           </motion.div>
 
           
-          {/* <StaticMenti />
-          <StaticMenti2 /> */}
+          <StaticMenti />
+          <StaticMenti2 />
 
           {/* Clock */}
           <motion.div
