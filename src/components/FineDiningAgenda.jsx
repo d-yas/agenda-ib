@@ -15,7 +15,7 @@ const FineDiningAgenda = () => {
 
   if (!guest) {
     return (
-      <div className="min-h-screen bg-[#000317] text-[#8BE6FF] overflow-hidden relative">
+      {/* <div className="min-h-screen bg-[#000317] text-[#8BE6FF] overflow-hidden relative">
         <Header guest={currentGuest} />
 
         <ShootingStars />
@@ -25,7 +25,7 @@ const FineDiningAgenda = () => {
         <Particles />
 
         <Footer />
-      </div>
+      </div> */} /* İptal ettik */
     );
   }
 };
