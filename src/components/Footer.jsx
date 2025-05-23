@@ -159,8 +159,8 @@ const Footer = () => {
           </motion.div>
 
           
-          <StaticMenti />
-          <StaticMenti2 />
+          {/* <StaticMenti />
+          <StaticMenti2 /> */}
 
           {/* Clock */}
           <motion.div
