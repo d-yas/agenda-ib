@@ -29,7 +29,7 @@ export const eventSchedule = [
     {
       id: 4,
       type: "Toplantı",
-      time: "11:00 - 12:15",
+      time: "11:00 - 12:30",
       title: "Toplantı",
       description: "İkinci Yüzyıl Vizyonu & Performans Değerlendirmesi", 
       location: "Türkiye İş Bankası Kule 1",
