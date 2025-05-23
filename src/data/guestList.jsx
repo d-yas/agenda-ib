@@ -80,6 +80,16 @@ export const guestList = [
     ]
   },
   {
+    firm: "Birim Müdürü",
+    members: [
+      {
+        id: "BIRIM-159",
+        name: "",
+        title: "Sn. Selen Köse"
+      },
+    ]
+  },
+  {
     firm: "Perakende Krediler Takip Bölümü",
     members: [
       {
